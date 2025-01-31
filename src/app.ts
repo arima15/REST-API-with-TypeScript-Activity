@@ -19,6 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(helmet());
 
+app.use('/', userRouter);
+
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
 });
